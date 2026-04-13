@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  labels:
+    app: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        # AWS ECR URL
+        image: 894759051454.dkr.ecr.ap-south-1.amazonaws.com/voting-frontend:v1
+        ports:
+        - containerPort: 80
+
+        env:
+        - name: VITE_API_URL
+          value: "http://localhost:5000"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  type: LoadBalancer # Public access 
+  selector:
+    app: frontend
+  ports:
+  - port: 80
+    targetPort: 80
