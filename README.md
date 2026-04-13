@@ -18,14 +18,5 @@ It’s not just a voting app; it’s a full DevOps journey:
 
 ---
 
-## 🚀 Run it Locally in 3 Steps
-
-**Prerequisites:** Docker Desktop (K8s enabled) and `kubectl`.
-
-**1. Clone & Apply**
-```bash
-git clone [https://github.com/iamaatifjhoja0123/VOTING-APP-K8S.git](https://github.com/iamaatifjhoja0123/VOTING-APP-K8S.git)
-cd VOTING-APP-K8S
-kubectl apply -f k8s-manifests/
 
 # Built with by Aatif Jhoja
