@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cloud-war-gitops
+  namespace: argocd
+spec:
+  project: default
+  source:
+    # Aapki GitHub Repo jisme K8s YAMLs hain
+    repoURL: 'https://github.com/iamaatifjhoja0123/VOTING-APP-K8S.git'
+    targetRevision: HEAD
+    path: k8s-manifests
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

@@ -25,3 +25,5 @@ override.tf.json
 # 3. OS Files
 .DS_Store
 Thumbs.db
+
+echo "helm.exe" >> .gitignore
