@@ -9,6 +9,8 @@
 
 A production-grade, full-stack voting application (AWS vs Azure) built to demonstrate a complete **Cloud-Native DevSecOps, GitOps, and Observability lifecycle**. This project goes beyond application code to showcase robust cloud infrastructure automation.
 
+![Top10News Architecture Diagram](diagram.png)
+
 ---
 
 ## 🏗️ Architecture & Implementation Phases
